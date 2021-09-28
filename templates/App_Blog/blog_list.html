@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block title %} Home {% endblock %}
+
+{% block body_block %}
+
+    {% for blog in blogs %}
+        <h2>{{ blog.blog_title }}</h2>
+        <h6>{{ blog.publish_date }}</h6>
+    {% endfor %}
+
+
+{% endblock %}
