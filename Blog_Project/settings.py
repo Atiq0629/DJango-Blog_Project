@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-cu&wqs%5c#xfnlr-%oq5m2k&vp5_shx-(y3+jbqm)z8*r7_)5^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+
+
 ALLOWED_HOSTS = ['127.0.0.1', 'blog-testx.herokuapp.com/']
 
 
@@ -129,6 +131,16 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = (BASE_DIR / 'media')
+
+
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
